@@ -9,6 +9,7 @@ const CelebratingNhub: React.FC = () => {
           Celebrating
           <span className='text-[#39B54A] text-center '> nHub@10</span>
         </h1>
+        <div className='bg-[#33C36C] w-[206px] h-[5px] '></div>
         <p className='font-normal text-[24px] leading-[36px] text-black/65 mt-[25px] mb-[72px] max-w-[1095px] text-center '>
           Founded in 2015, nHub has been a catalyst for digital transformation
           in Northern Nigeria, mentoring startups, training tech talent, and

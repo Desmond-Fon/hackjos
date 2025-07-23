@@ -22,8 +22,8 @@ const Card: React.FC<CardProps> = ({ image, icon, header, paragraph }) => {
         <div className='flex gap-[16px]'>
           <Icon
             icon={icon}
-            width={34}
-            height={34}
+            width={38}
+            height={38}
             className='p-[9px] rounded-[50%] text-white bg-[#33C36C] '
           />
           <h2 className='font-medium text-[28px] leading-[36px] '>{header}</h2>
