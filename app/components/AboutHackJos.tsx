@@ -4,10 +4,10 @@ import { Inter } from "next/font/google";
 import { Icon } from "@iconify/react";
 const AboutHackJos: React.FC = () => {
   return (
-    <section className='px-6 py-[87px] md:px-20 max-h-[984px] bg-white'>
+    <section className='px-6 md:py-[87px] md:px-20 md:max-h-[984px] bg-white'>
       {/* Header Section */}
       <div className='text-center  mb-10'>
-        <h2 className='text-3xl md:text-[60px] font-Inter font-bold'>
+        <h2 className='text-[40px] md:text-[60px] font-Inter font-bold'>
           About <span className='text-[#33C36C]'>HackJos 2025</span>
         </h2>
         <p className='mt-[24px] text-gray-700 md:text-[24px] max-w-[1181px] leading-[36px] font-normal mx-auto'>
@@ -24,7 +24,7 @@ const AboutHackJos: React.FC = () => {
       <div className='grid md:grid-cols-2 max-w-[1270px] m-auto gap-10 items-center'>
         {/* Left Text Section */}
         <div>
-          <h3 className='text-2xl md:text-[45px] font-semibold mb-4'>
+          <h3 className='text-[35px] max-md:text-center md:text-[45px] font-semibold mb-4'>
             Our Mission
           </h3>
           <p className='text-gray-700 md:text-[20px] mb-6'>

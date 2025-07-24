@@ -3,14 +3,14 @@ import Card from "../ui/Card";
 
 const CelebratingNhub: React.FC = () => {
   return (
-    <main className='flex flex-col bg-[#33C36C1A] py-[87px] text-[60px] '>
+    <main className='flex flex-col bg-[#33C36C1A] py-[87px] '>
       <section className='flex justify-center items-center flex-col'>
-        <h1>
+        <h1 className='md:text-[60px] text-[30px] '>
           Celebrating
           <span className='text-[#39B54A] text-center '> nHub@10</span>
         </h1>
-        <div className='bg-[#33C36C] w-[206px] h-[5px] '></div>
-        <p className='font-normal text-[24px] leading-[36px] text-black/65 mt-[25px] mb-[72px] max-w-[1095px] text-center '>
+        <div className='bg-[#33C36C] md:w-[206px] w-[150px] h-[5px] '></div>
+        <p className='font-normal md:text-[24px] text-[15px] max-md:px-[10px] leading-[36px] text-black/65 mt-[25px] mb-[72px] max-w-[1095px] text-center '>
           Founded in 2015, nHub has been a catalyst for digital transformation
           in Northern Nigeria, mentoring startups, training tech talent, and
           shaping public policy around innovation and entrepreneurship. This
