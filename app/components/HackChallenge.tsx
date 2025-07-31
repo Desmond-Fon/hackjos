@@ -1,50 +1,49 @@
 import React from "react";
-import Card from "../ui/Card";
+import Card from "../ui/ChallengeCard";
 
-const CelebratingNhub: React.FC = () => {
+const HackChallenge = () => {
   return (
-    <main className='flex flex-col bg-[#33C36C1A] py-[87px] '>
+    <main className='flex flex-col bg-white py-[87px] '>
       <section className='flex justify-center items-center flex-col'>
         <h1 className='md:text-[60px] text-[30px] '>
-          Celebrating
-          <span className='text-[#39B54A] text-center '> nHub@10</span>
+          HackJos
+          <span className='text-[#39B54A] text-center '> Challenge</span>
         </h1>
         <div className='bg-[#33C36C] md:w-[206px] w-[150px] h-[5px] '></div>
-        <p className='font-normal md:text-[24px] text-[15px] max-md:px-[10px] leading-[36px] text-black/65 mt-[25px] mb-[72px] max-w-[1095px] text-center '>
-          Founded in 2015, nHub has been a catalyst for digital transformation
-          in Northern Nigeria, mentoring startups, training tech talent, and
-          shaping public policy around innovation and entrepreneurship. This
-          October, we proudly mark 10 years of impact.
+        <p className='font-normal md:text-[24px] text-[15px] max-md:px-[10px] leading-[36px] text-black/65 mt-[25px] mb-[72px] max-w-[739px] text-center '>
+          Choose your challenge track and build solutions that will transform
+          how Nigerian MSMEs operate and thrive
         </p>
       </section>
       <div className='grid grid-col-1 md:grid-cols-2 justify-center items-center 2xl:m-auto max-w-[1279px] mx-[80px] gap-[33px] place-items-center '>
         <Card
-          image='Frame 1418067579.png'
-          icon='fluent:chat-48-regular'
+          icon='proicons:cart'
           header='Founders Chat'
           paragraph="Intimate conversations with nHub's founding team, sharing insights from a decade of innovation and growth."
         />
         <Card
-          image='Frame 1418067579 (1).png'
-          icon='solar:cup-outline'
+          icon='circum:bank'
           header='nHub@10 Showcase'
           paragraph='Explore the incredible journey of nHub through interactive displays and success stories from our community.'
         />
         <Card
-          image='Frame 1418067579 (2).png'
-          icon='simple-line-icons:badge'
+          icon='fluent:arrow-growth-24-regular'
           header='Recognition Ceremony'
           paragraph="Honoring the outstanding contributors, partners, and innovators who have shaped nHub's remarkable journey."
         />
         <Card
-          image='Frame 1418067579 (3).png'
-          icon='game-icons:wine-glass'
+          icon='mage:globe'
           header='Toast'
           paragraph='An elegant evening celebration bringing together the entire nHub community for networking and festivities.'
         />
+      </div>
+      <div className='w-full flex justify-center '>
+        <button className='bg-[#33C36C] hover:bg-[#44D47D] py-[10px] md:px-[45px] px-[20px] md:text-[28px] text-[20px] rounded-[30px] cursor-pointer text-white '>
+          View Challenge Details
+        </button>
       </div>
     </main>
   );
 };
 
-export default CelebratingNhub;
+export default HackChallenge;

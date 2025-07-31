@@ -21,8 +21,17 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  /* outline: 1px red solid; */
+  outline: 1px red solid;
 }
 
 * {
+  /* outline: 1px red solid; */
+}
+
+.shadow-blur {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05), 0 5px 10px rgba(0, 0, 0, 0.05);
+  color: #000;
+}
+.shadow-blur-2 {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05), 0 5px 5px rgba(0, 0, 0, 0.05);
 }
