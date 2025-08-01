@@ -6,10 +6,13 @@ import ConferenceExp from "./components/ConferenceExp";
 import WhoShouldAttend from "./components/WhoShouldAttend";
 import GetInvolved from "./components/GetInvolved";
 import ContactForm from "./components/ContactForm";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
     <main>
+      <Header />
       <AboutHackJos />
       <CelebratingNhub />
       <HackChallenge />
@@ -17,6 +20,7 @@ export default function Home() {
       <WhoShouldAttend />
       <GetInvolved />
       <ContactForm />
+      <Footer />
     </main>
   );
 }
