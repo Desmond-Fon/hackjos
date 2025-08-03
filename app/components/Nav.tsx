@@ -1,9 +1,18 @@
+"use client"
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Nav = () => {
+  const pathname = usePathname()
   return (
     <>
-      <div className="bg-gradient-to-b from-[#0E0E0E59] to-[#0E0E0E] px-20 text-white py-6 relative z-50 flex justify-between items-center">
+      <div
+        className={`${
+          pathname === "/"
+            ? "bg-gradient-to-b from-[#0E0E0E59] to-[#0E0E0E]"
+            : "bg-[#33C36C]"
+        }  px-20 text-white py-6 relative z-50 flex justify-between items-center`}
+      >
         <h1 className="text-[32px] font-medium">HackJos</h1>
 
         <ul className="flex justify-center items-center gap-12 text-xl">
