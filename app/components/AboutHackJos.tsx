@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import { Icon } from "@iconify/react";
 const AboutHackJos: React.FC = () => {
   return (
-    <section className='px-6 md:py-[87px] md:px-20 md:max-h-[984px] max-md:pt-[40px] bg-white'>
+    <section className='px-6 md:py-[87px] md:px-20 xl:max-h-[984px] max-md:pt-[40px] bg-white'>
       {/* Header Section */}
       <div className='text-center  mb-10'>
         <h2 className='text-[40px] md:text-[60px] font-Inter font-bold'>
@@ -21,7 +21,7 @@ const AboutHackJos: React.FC = () => {
       </div>
 
       {/* Main Content */}
-      <div className='grid md:grid-cols-2 max-w-[1270px] m-auto gap-10 items-center'>
+      <div className='grid md:grid-cols-2 max-xl:flex max-xl:flex-col max-w-[1270px] m-auto gap-10 items-center'>
         {/* Left Text Section */}
         <div>
           <h3 className='text-[35px] max-md:text-center md:text-[45px] font-semibold mb-4'>

@@ -14,7 +14,7 @@ const GetInvolved = () => {
           tech revolution
         </p>
       </section>
-      <section className='flex gap-[41px] justify-center '>
+      <section className='flex flex-wrap gap-[41px] justify-center '>
         <GetInvolvedCard
           icon='mynaui:users-group'
           header='Hackjos 2025'
