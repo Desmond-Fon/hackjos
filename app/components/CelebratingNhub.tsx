@@ -17,7 +17,7 @@ const CelebratingNhub: React.FC = () => {
           October, we proudly mark 10 years of impact.
         </p>
       </section>
-      <div className='grid grid-col-1 md:grid-cols-2 justify-center items-center 2xl:m-auto max-w-[1279px] mx-[80px] gap-[33px] place-items-center '>
+      <div className='grid md:grid-cols-2 max-xl:flex max-xl:flex-wrap justify-center items-center 2xl:m-auto max-w-[1279px] mx-[80px] gap-[33px] place-items-center '>
         <Card
           image='Frame 1418067579.png'
           icon='fluent:chat-48-regular'
