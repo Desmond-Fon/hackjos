@@ -2,9 +2,9 @@ import React from "react";
 
 const ContactForm = () => {
   return (
-    <main className='px-[78px] py-[128px] w-full '>
-      <section className=' w-full rounded-[30px]  place-self-center bg-gradient-to-b from-[#33C36C] to-[#185D34] flex justify-center items-center '>
-        <section className=' w-full 2xl:w-[573px] flex flex-1/2 2xl:flex-2/5  '>
+    <main className='md:px-[78px] py-[128px] w-full '>
+      <section className=' w-full md:rounded-[30px] max-xl:py-[20px]  place-self-center bg-gradient-to-b from-[#33C36C] to-[#185D34]  flex justify-center items-center '>
+        <section className=' w-full 2xl:w-[573px] hidden xl:flex flex-1/2 2xl:flex-2/5  '>
           <img src='./contactImage.png' alt='' className='w-full h-full  ' />
         </section>
         <section className='flex-1/2 2xl:flex-3/5  flex felx-col items-center justify-center  '>
@@ -35,7 +35,7 @@ const ContactForm = () => {
             ></textarea>
             <button
               type='submit'
-              className=' text-[18px] text-white cursor-pointer hover:bg-[#22b25b] leading-[32px] w-[229px] h-[50px] p-[10px] font-medium text-center rounded-[15px] bg-[#33C36C] '
+              className=' text-[18px] text-white cursor-pointer max-md:place-self-center hover:bg-[#22b25b] leading-[32px] w-[229px] h-[50px] p-[10px] font-medium text-center rounded-[15px] bg-[#33C36C] '
             >
               Submit
             </button>

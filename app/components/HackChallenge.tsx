@@ -15,7 +15,7 @@ const HackChallenge = () => {
           how Nigerian MSMEs operate and thrive
         </p>
       </section>
-      <div className='grid grid-col-1 md:grid-cols-2 justify-center items-center 2xl:m-auto max-w-[1279px] mx-[80px] gap-[33px] place-items-center '>
+      <div className='grid max-xl:flex max-xl:flex-wrap md:grid-cols-2 justify-center items-center 2xl:m-auto max-w-[1279px] mx-[80px] gap-[33px] place-items-center '>
         <Card
           icon='proicons:cart'
           header='Founders Chat'

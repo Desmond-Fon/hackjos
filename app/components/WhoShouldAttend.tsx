@@ -1,5 +1,5 @@
 import React from "react";
-import WhoShouldAttendCard from "./WhoShouldAttendCard";
+import WhoShouldAttendCard from "../ui/WhoShouldAttendCard";
 import Image from "../../public/imageOne/Frame 1418067611.png";
 
 const WhoShouldAttend = () => {
@@ -13,7 +13,7 @@ const WhoShouldAttend = () => {
           ecosystem
         </p>
       </section>
-      <div className='grid grid-col-1 md:grid-cols-3 justify-center items-center 2xl:m-auto max-w-[1279px] mx-[80px] gap-[33px] place-items-center '>
+      <div className='grid  max-xl:flex max-xl:flex-wrap md:grid-cols-3 justify-center items-center 2xl:m-auto max-w-[1279px] mx-[80px] gap-[33px] place-items-center '>
         <WhoShouldAttendCard
           image='imageOne/Frame 1418067610 (1).png'
           header='Entrepreneurs'
@@ -53,14 +53,14 @@ const WhoShouldAttend = () => {
         />
       </div>
       <div className='w-[90%] rounded-[15px] py-[61px] gap-[9px] bg-gradient-to-r from-[#33C36C] to-[#185D34] place-self-center flex flex-col items-center justify-center '>
-        <h2 className='text-[32px]  font-semibold text-white '>
+        <h2 className='md:text-[32px] text-[25px] font-semibold text-white '>
           Join 500+ Innovators
         </h2>
-        <p className=' text-white text-[24px] font-normal '>
+        <p className=' text-white max-md:text-center text-[18px] max-xl:px-[20px] md:text-[24px] font-normal '>
           Be part of Nigeria's largest tech gathering and shape the future of
           innovation
         </p>
-        <button className='bg-white mt-[22px] hover:bg-white/80 py-[10px] md:px-[45px] px-[20px] md:text-[28px] text-[20px] rounded-[30px] cursor-pointer text-[#33C36C] '>
+        <button className='bg-white mt-[22px] hover:bg-white/80 py-[10px] md:px-[45px] px-[20px] md:text-[28px] text-[18px] rounded-[30px] cursor-pointer text-[#33C36C] '>
           Register Today
         </button>
       </div>

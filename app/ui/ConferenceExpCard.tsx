@@ -18,10 +18,10 @@ const ConferenceExpCard: React.FC<CardProps> = ({
 }) => {
   return (
     <section
-      className={` md:max-w-[595px] max-md:w-[300px] py-[21px] px-[40px] shadow-blur-2 rounded-[20px] bg-white space-y-[33px] mb-[51px] md:max-h-[240px] ${classname} `}
+      className={` md:max-w-[595px] max-md:w-[300px] md:py-[21px] px-[40px] shadow-blur-2 rounded-[20px] bg-white space-y-[33px] mb-[51px]  xl:max-h-[240px] ${classname} `}
     >
       <div className='px-[20px] space-y-[15px] pb-[40px]  '>
-        <div className='flex gap-[16px] items-center'>
+        <div className='flex max-md:flex-col gap-[16px] max-md:py-[20px] md:items-center'>
           <Icon
             icon={icon}
             width={45}
