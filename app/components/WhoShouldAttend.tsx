@@ -13,7 +13,7 @@ const WhoShouldAttend = () => {
           ecosystem
         </p>
       </section>
-      <div className='grid  max-xl:flex max-xl:flex-wrap md:grid-cols-3 justify-center items-center 2xl:m-auto max-w-[1279px] mx-[80px] gap-[33px] place-items-center '>
+      <div className='grid  max-xl:flex max-xl:flex-wrap md:grid-cols-3 justify-center items-center 2xl:m-auto max-w-[1279px] lg:mx-[80px] lg:gap-[33px] place-items-center '>
         <WhoShouldAttendCard
           image='imageOne/Frame 1418067610 (1).png'
           header='Entrepreneurs'

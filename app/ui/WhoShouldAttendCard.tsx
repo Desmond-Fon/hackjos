@@ -25,7 +25,7 @@ const WhoShouldAttendCard: React.FC<CardProps> = ({
     >
       {" "}
       <section
-        className={`md:max-w-[627px] max-md:w-[300px] shadow-blur rounded-[20px]  bg-white space-y-[33px] mb-[51px] md:max-h-[443px]  `}
+        className={`md:max-w-[627px] max-md:w-[300px] shadow-blur rounded-[20px]  bg-white space-y-[33px] mb-[51px] py-2 `}
       >
         <div className='px-[20px] flex flex-col items-center space-y-[15px] pb-[40px]'>
           <div className='relative  w-[80px] aspect-[1/1]'>
