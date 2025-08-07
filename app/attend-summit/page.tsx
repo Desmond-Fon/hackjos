@@ -2,11 +2,11 @@ import Image from "next/image";
 import Hero from "../components/Hero";
 import Link from "next/link";
 
-const Apply = () => {
+const AttendSummit = () => {
   return (
     <div className="pb-[100px]">
       <Hero
-        title="Apply to Participate"
+        title="Register to Attend the Innovation Summit"
         description="Join HackJos 2025 and compete for amazing prizes while solving
             real-world challenges"
       />
@@ -94,7 +94,7 @@ const Apply = () => {
                 htmlFor="email"
                 className="font-[500] lg:text-[20px] text-[#00000065]"
               >
-                Skill (UI/UX, Front End, Business Developer, Backend){" "}
+                Organization{" "}
               </label>
               <select
                 name=""
@@ -102,7 +102,7 @@ const Apply = () => {
                 className="rounded-[10px] lg:rounded-[15px] border h-[40px] lg:h-[65px] px-2 w-full border-[#00000045] font-[500] lg:text-[20px]"
               >
                 <option value="" disabled selected>
-                  Select skill
+                  Select organization
                 </option>
               </select>
             </div>
@@ -111,7 +111,7 @@ const Apply = () => {
                 htmlFor="email"
                 className="font-[500] lg:text-[20px] text-[#00000065]"
               >
-                Do you have a team?{" "}
+                Profession{" "}
               </label>
               <select
                 name=""
@@ -119,40 +119,11 @@ const Apply = () => {
                 className="rounded-[10px] lg:rounded-[15px] border h-[40px] lg:h-[65px] px-2 w-full border-[#00000045] font-[500] lg:text-[20px]"
               >
                 <option value="" disabled selected>
-                  Select
+                  Select profession
                 </option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
               </select>
-            </div>
-            <div className="flex flex-col gap-2">
-              <label
-                htmlFor="skills"
-                className="font-[500] lg:text-[20px] text-[#00000065]"
-              >
-                If yes, Fill in their names and skill (Comma Separated){" "}
-              </label>
-              <input
-                type="text"
-                className="rounded-[10px] lg:rounded-[15px] border h-[40px] lg:h-[65px] px-2 w-full border-[#00000045] font-[500] lg:text-[20px]"
-                name=""
-                id="skills"
-                placeholder="Name and skill"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label
-                htmlFor="skills"
-                className="font-[500] lg:text-[20px] text-[#00000065]"
-              >
-                Describe your idea{" "}
-              </label>
-              <textarea
-                className="rounded-[10px] lg:rounded-[15px] border h-[130px] lg:h-[180px] p-2 lg:p-3 w-full border-[#00000045] font-[500] lg:text-[20px]"
-                name=""
-                id="skills"
-                placeholder="Describe idea"
-              />
             </div>
           </div>
 
@@ -170,4 +141,4 @@ const Apply = () => {
   );
 };
 
-export default Apply;
+export default AttendSummit;
