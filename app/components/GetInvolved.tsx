@@ -3,7 +3,7 @@ import GetInvolvedCard from "../ui/GetInvolvedCard";
 
 const GetInvolved = () => {
   return (
-    <div className='bg-[#33C36C]/10 py-[79px] px-[81px] '>
+    <div className='bg-[#33C36C]/10 py-[79px] px-10 lg:px-[81px] '>
       <section className='flex justify-center items-center flex-col'>
         <h1 className='md:text-[60px] text-[30px] '>
           Get<span className='text-[#39B54A] text-center '> Involved</span>{" "}
