@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import { Icon } from "@iconify/react";
 const AboutHackJos: React.FC = () => {
   return (
-    <section className='px-6 md:py-[87px] md:px-20 xl:max-h-[984px] max-md:pt-[40px] bg-white'>
+    <section className='px-6 md:py-[0px] md:pb-[80px] md:px-20 xl:max-h-[984px] max-md:pt-[40px] bg-white'>
       {/* Header Section */}
       <div className='text-center  mb-10'>
         <h2 className='text-[40px] md:text-[60px] font-Inter font-bold'>
@@ -60,7 +60,7 @@ const AboutHackJos: React.FC = () => {
         {/* Right Image */}
         <div className='w-full'>
           <Image
-            src='/Frame 1418067566.png'
+            src='/about.png'
             alt='HackJos Team'
             width={600}
             height={400}
