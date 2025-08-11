@@ -42,7 +42,7 @@ const Nav = () => {
           </li>
           <li>
             <Link
-              href={"/"}
+              href={"/partners"}
               className="hover:text-[#33C36C] transition-all duration-[0.5s] "
             >
               Partners
@@ -85,7 +85,7 @@ const Nav = () => {
             HackJos
           </Link>
           <Link
-            href={"/"}
+            href={"/partners"}
             className="hover:text-[#33C36C] transition-all duration-[0.5s] "
             onClick={() => setMenuOpen(false)}
           >

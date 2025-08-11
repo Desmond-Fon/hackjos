@@ -3,14 +3,14 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className='bg-[#33C36C] px-5 lg:px-20 pt-28  pb-13 text-white'>
-      <div className='flex max-md:flex-col md:justify-between md:items-start gap-[64px]'>
+    <div className='bg-[#33C36C] px-5 lg:px-20 pt-16 lg:pt-28  pb-13 text-white'>
+      <div className='flex max-md:flex-col md:justify-between md:items-start gap-[30px] lg:gap-[64px]'>
         <div className='md:w-[30%]'>
           <div className='mb-6 max-md:flex max-md:flex-col max-md:gap-[20px] '>
             <h2 className='font-bold text-[45px] leading-[32px]'>HackJos</h2>
-            <p className='text-[24px]'>Celebrating nHub @10</p>
+            <p className='text-lg lg:text-[24px]'>Celebrating nHub @10</p>
           </div>
-          <p className='text-xl md:leading-[32px] leading-[40px] '>
+          <p className='lg:text-xl md:leading-[32px] lg:leading-[40px] '>
             Join Nigeria's premier hackathon and tech conference as we celebrate
             a decade of innovation and reimagine the future of MSMEs through
             technology.
@@ -22,9 +22,9 @@ const Footer = () => {
             <h2 className='text-2xl leading-[32px] font-semibold mb-[18px]'>
               Event
             </h2>
-            <ul className='flex flex-col gap-2 items-start font-medium text-xl'>
+            <ul className='flex flex-col gap-2 items-start font-medium lg:text-xl'>
               <li>
-                <Link href={"/"}>About HackJos</Link>
+                <Link href={"/about"}>About HackJos</Link>
               </li>
               <li>
                 <Link href={"/"}>Schedule</Link>
@@ -41,9 +41,9 @@ const Footer = () => {
             <h2 className='text-2xl leading-[32px] font-semibold mb-[18px]'>
               Participate
             </h2>
-            <ul className='flex flex-col gap-2 items-start font-medium text-xl'>
+            <ul className='flex flex-col gap-2 items-start font-medium lg:text-xl'>
               <li>
-                <Link href={"/"}>Apply Now</Link>
+                <Link href={"/apply"}>Apply Now</Link>
               </li>
               <li>
                 <Link href={"/"}>Become a Speaker</Link>
@@ -60,7 +60,7 @@ const Footer = () => {
             <h2 className='text-2xl leading-[32px] font-semibold mb-[18px]'>
               Contact Us
             </h2>
-            <ul className='flex flex-col gap-2 items-start font-medium text-lg'>
+            <ul className='flex flex-col gap-2 items-start font-medium lg:text-lg'>
               <li>
                 <Link href={"/"}>partnerships@hackjos.ng</Link>
               </li>

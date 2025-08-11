@@ -1,6 +1,7 @@
 import React from "react";
 import WhoShouldAttendCard from "../ui/WhoShouldAttendCard";
 import Image from "../../public/imageOne/Frame 1418067611.png";
+import Link from "next/link";
 
 const WhoShouldAttend = () => {
   return (
@@ -60,9 +61,11 @@ const WhoShouldAttend = () => {
           Be part of Nigeria's largest tech gathering and shape the future of
           innovation
         </p>
-        <button className="bg-white mt-[22px] hover:bg-white/80 py-[10px] md:px-[45px] px-[20px] md:text-[28px] text-[18px] rounded-[30px] cursor-pointer text-[#33C36C] ">
-          Register Today
-        </button>
+        <Link href={'/register'}>
+          <button className="bg-white mt-[22px] hover:bg-white/80 py-[10px] md:px-[45px] px-[20px] md:text-[28px] text-[18px] rounded-[30px] cursor-pointer text-[#33C36C] ">
+            Register Today
+          </button>
+        </Link>
       </div>
     </main>
   );

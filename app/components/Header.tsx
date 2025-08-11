@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -54,12 +55,16 @@ const Header = () => {
           </div>
 
           <div className="flex justify-center items-center gap-6 mt-11">
-            <button className="xl:h-[75px] md:h-[50px] h-[40px] rounded-[20px] md:rounded-[30px] px-4 md:px-10 bg-[#33C36C] md:text-[20px] xl:text-[28px] font-medium">
-              Apply for HackJos Challenge
-            </button>
-            <button className="xl:h-[75px] md:h-[50px] h-[40px] rounded-[20px] md:rounded-[30px] px-4 md:px-10 text-[#33C36C] bg-white md:text-[20px] xl:text-[28px] font-medium">
-              Register to Attend{" "}
-            </button>
+            <Link href={'/apply'}>
+              <button className="xl:h-[75px] md:h-[50px] h-[40px] rounded-[20px] md:rounded-[30px] px-4 md:px-10 bg-[#33C36C] md:text-[20px] xl:text-[28px] font-medium flex justify-center items-center gap-1">
+                Apply for HackJos <span className="hidden lg:block">{" "}Challenge</span>
+              </button>
+            </Link>
+            <Link href={'/register'}>
+              <button className="xl:h-[75px] md:h-[50px] h-[40px] rounded-[20px] md:rounded-[30px] px-4 md:px-10 text-[#33C36C] bg-white md:text-[20px] xl:text-[28px] font-medium">
+                Register to Attend{" "}
+              </button>
+            </Link>
           </div>
         </div>
       </div>
