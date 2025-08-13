@@ -34,7 +34,7 @@ const page = () => {
           title='Our Story & Mission'
           description='Join HackJos 2025 and compete for amazing prizes while solving real-world challenges'
         />
-        <div className='text-center  mb-10'>
+        <div className='text-center px-[10px]   mb-10'>
           <h2 className='text-[40px] md:text-[60px] font-Inter font-bold'>
             About <span className='text-[#33C36C]'>HackJos 2025</span>
           </h2>
@@ -49,7 +49,7 @@ const page = () => {
         </div>
         <div className='grid md:grid-cols-2 max-xl:flex max-xl:flex-col max-w-[1270px] m-auto gap-10 items-center'>
           {/* Left Text Section */}
-          <div>
+          <div className='px-10'>
             <h3 className='text-[35px] max-md:text-center md:text-[45px] font-semibold mb-4'>
               Our Mission
             </h3>
@@ -61,22 +61,37 @@ const page = () => {
               real-world challenges faced by small businesses across Nigeria.
             </p>
 
-            <ul className='space-y-[18px] md:text-[20px] text-gray-800'>
+            <ul className='space-y-[18px] md:text-[20px]  text-gray-800'>
               <li className='flex items-start'>
                 <span className='text-[#33C36C] mr-2'>
-                  <Icon icon='charm:circle-tick' width={32} height={32} />
+                  <Icon
+                    icon='charm:circle-tick'
+                    className=' w-[20px] lg:w-[32px] h-[20px] lg:h-[32px] '
+                    width={32}
+                    height={32}
+                  />
                 </span>
                 48 hours of intensive innovation and collaboration
               </li>
               <li className='flex items-start'>
                 <span className='text-[#33C36C] mr-2'>
-                  <Icon icon='charm:circle-tick' width={32} height={32} />
+                  <Icon
+                    icon='charm:circle-tick'
+                    className=' w-[20px] lg:w-[32px] h-[20px] lg:h-[32px] '
+                    width={32}
+                    height={32}
+                  />
                 </span>
                 Mentorship from industry experts and thought leaders
               </li>
               <li className='flex items-start'>
                 <span className='text-[#33C36C] mr-2'>
-                  <Icon icon='charm:circle-tick' width={32} height={32} />
+                  <Icon
+                    icon='charm:circle-tick'
+                    className=' w-[20px] lg:w-[32px] h-[20px] lg:h-[32px] '
+                    width={32}
+                    height={32}
+                  />
                 </span>
                 Opportunity to showcase solutions to potential investors
               </li>
@@ -84,13 +99,13 @@ const page = () => {
           </div>
 
           {/* Right Image */}
-          <div className='w-full'>
+          <div className='w-full mx-auto flex justify-center max-md:px-10 '>
             <Image
               src='/mission-img-1.png'
               alt='HackJos Team'
               width={600}
               height={400}
-              className='rounded-lg object-cover shadow-md'
+              className='rounded-lg  object-cover shadow-md'
             />
           </div>
         </div>
@@ -197,7 +212,7 @@ const page = () => {
                 loading='lazy'
                 src={image}
                 alt={`Slide ${index}`}
-                className=' w-screen max-md:px-[20px] lg:w-[574.5px] h-[383px] mb-[218px] mt-[108px] rounded-[15px] object-cover'
+                className=' w-screen max-lg:px-[20px] lg:w-[574.5px] h-[383px] mb-[218px] mt-[108px]  max-lg:rounded-[10%] rounded-[15px] object-cover'
                 width={574.5}
                 height={383}
               />
