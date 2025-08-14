@@ -1,57 +1,45 @@
-'use client'
 import React, { useState } from "react";
-import { ContactFormData } from "../types";
-import { supabase } from "../utils/supabase";
+import { submitContactForm } from "../actions/contactActions";
 
-const ContactForm = () => {
-  const [formData, setFormData] = useState<ContactFormData>({
-    fullName: "",
-    email: "",
-    message: ""
-  });
-  const [loading, setLoading] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+const ContactFormWithServerAction = () => {
+  const [pending, setPending] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
+  async function handleSubmit(formData: FormData) {
+    setPending(true);
     setError(null);
     
     try {
-      // Add a timestamp
-      const submissionData = {
-        ...formData,
-        createdAt: new Date().toISOString()
-      };
+      // Extract form data
+      const fullName = formData.get('fullName') as string;
+      const email = formData.get('email') as string;
+      const message = formData.get('message') as string;
       
-      const { error } = await supabase
-        .from('contact_submissions')
-        .insert(submissionData);
+      // Submit with server action
+      const result = await submitContactForm({ fullName, email, message });
       
-      if (error) throw error;
+      if (!result.success) {
+        throw new Error(result.error || 'Failed to submit form');
+      }
       
-      // Reset form and show success
-      setFormData({ fullName: "", email: "", message: "" });
-      setSubmitted(true);
+      // Show success message
+      setSuccess(true);
       
-      // Reset success message after 5 seconds
+      // Reset form (need to access the form element)
+      const form = document.getElementById('contact-form') as HTMLFormElement;
+      if (form) form.reset();
+      
+      // Hide success message after 5 seconds
       setTimeout(() => {
-        setSubmitted(false);
+        setSuccess(false);
       }, 5000);
-      
-    } catch (error: any) {
-      console.error('Error submitting form:', error.message);
-      setError(error.message);
+    } catch (err: any) {
+      setError(err.message || 'An error occurred');
     } finally {
-      setLoading(false);
+      setPending(false);
     }
-  };
+  }
 
   return (
     <main className="md:px-[78px] py-[128px] w-full ">
@@ -79,14 +67,15 @@ const ContactForm = () => {
         </section>
         <section className="flex-1/2 2xl:flex-3/5  flex felx-col items-center justify-center  ">
           <form
-            onSubmit={handleSubmit}
+            id="contact-form"
+            action={handleSubmit}
             className="flex w-[80%]  gap-[18px] bg-white/15 border border-white rounded-[30px] px-[26px] py-[45px]   flex-col"
           >
             <h1 className=" text-[#FFFFFF] font-semibold text-[30px] leading-[32px] w-full ">
               Get in Touch
             </h1>
             
-            {submitted && (
+            {success && (
               <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
                 Thank you for your message. We'll get back to you soon!
               </div>
@@ -101,8 +90,6 @@ const ContactForm = () => {
             <input
               type="text"
               name="fullName"
-              value={formData.fullName}
-              onChange={handleChange}
               placeholder="Full Name"
               required
               className="h-[55px] w-full placeholder:text-[white]/75 border border-white p-[10px] rounded-[12px]"
@@ -110,8 +97,6 @@ const ContactForm = () => {
             <input
               type="email"
               name="email"
-              value={formData.email}
-              onChange={handleChange}
               placeholder="Email"
               required
               className="h-[55px] w-full placeholder:text-[white]/75 border border-white p-[10px] rounded-[12px]"
@@ -119,18 +104,17 @@ const ContactForm = () => {
             <h2 className="text-[#fff] text-[16px] leading-[20px]">Message</h2>
             <textarea
               name="message"
-              value={formData.message}
-              onChange={handleChange}
               placeholder="Type here..."
               required
               className="h-[129px] w-full placeholder:text-[white]/75 border border-white p-[10px] rounded-[12px]"
             ></textarea>
             <button
               type="submit"
-              disabled={loading}
-              className={`text-[18px] text-white cursor-pointer max-md:place-self-center hover:bg-[#22b25b] leading-[32px] w-[229px] h-[50px] p-[10px] font-medium text-center rounded-[15px] ${loading ? 'bg-[#22b25b]/70' : 'bg-[#33C36C]'}`}
+              disabled={pending}
+              aria-disabled={pending}
+              className={`text-[18px] text-white cursor-pointer max-md:place-self-center hover:bg-[#22b25b] leading-[32px] w-[229px] h-[50px] p-[10px] font-medium text-center rounded-[15px] ${pending ? 'bg-[#22b25b]/70' : 'bg-[#33C36C]'}`}
             >
-              {loading ? "Submitting..." : "Submit"}
+              {pending ? "Submitting..." : "Submit"}
             </button>
           </form>
         </section>
@@ -139,4 +123,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default ContactFormWithServerAction;
