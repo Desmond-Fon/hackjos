@@ -35,7 +35,7 @@ const Nav = () => {
 
   const navItems = [
     { href: "/", label: "Home" },
-    { href: "/hackjos", label: "HackJos" },
+    { href: "/register", label: "HackJos" },
     { href: "/partners", label: "Partners" },
   ];
 
