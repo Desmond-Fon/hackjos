@@ -19,23 +19,23 @@ const ConferenceExp = () => {
         <ConferenceExpCard
           classname="xl:absolute top-[-12%] left-0 "
           icon="iconoir:calendar"
-          date="Day 1-Oct 22-23,2025 . 10:00am-10:00am"
-          header="24Hrs Hackathon Challenge"
+          date="Day 1 & 2 - Oct 22-23, 2025 . 10:00am-10:00am"
+          header="48Hrs Hackathon Challenge"
           paragraph="Build platforms that empower MSMEs to reach wider markets and streamline online sales"
         />
         <ConferenceExpCard
           classname="xl:absolute top-[36%] right-0 "
           icon="iconoir:calendar"
-          date="Day 2-Oct 23,2025 . 11:00am-4:00pm"
-          header="Keynote Presentations"
+          date="Day 3 - Oct 24, 2025 . 9am - 4:30pm"
+          header="Key note Presentations & Panel Sessions"
           paragraph="A full-day summit featuring expert talks, founder stories, policy panels, and showcases,exploring how to ignite and sustain MSME growth in Nigeria."
         />
         <ConferenceExpCard
           classname="xl:absolute bottom-[-25%] left-0 "
           icon="iconoir:calendar"
-          date="Day 3-Oct 24,2025 . 11:00am-4:00pm"
-          header="Celebration of nHub @ 10"
-          paragraph="A full-day celebration of nHub’s 10-year impact with tech talks, founder stories, policy chats, and innovation showcases"
+          date="Day 3 - Oct 24, 2025 . 7pm - 10pm"
+          header="Dinner Celebration of nHub @ 10"
+          paragraph="A night of celebration of nHub' 10-year impact with , tech talks and founder stories."
         />
         <div className="absolute hidden xl:flex top-0 h-[642px] bg-black w-[2px]  "></div>
         <div className=" absolute hidden xl:flex top-0 left-[48.5%] w-[20px] aspect-[1/1] p-[20px] bg-white border-[3px] border-[#33C36C] rounded-[50%] "></div>

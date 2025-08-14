@@ -28,7 +28,7 @@ const ConferenceExpCard: React.FC<CardProps> = ({
             height={45}
             className='p-[9px] rounded-[50%] text-white bg-[#33C36C] '
           />
-          <h2 className='font-medium text-black/75 bg-[#E0E0E059] rounded-[30px] px-[15px] py-[10px] md:text-[20px] text-[16px] md:leading-[36px] leading-[26px]'>
+          <h2 className='font-medium text-black/75 bg-[#E0E0E059] rounded-[30px] px-[15px] py-[10px] text-[16px] md:leading-[36px] leading-[26px]'>
             {date}
           </h2>
         </div>
