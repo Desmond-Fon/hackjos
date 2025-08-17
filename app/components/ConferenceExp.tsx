@@ -79,7 +79,7 @@ const ConferenceExp = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, margin: "0px 0px -120px 0px" }}
-        className="relative my-[50px] px-5 xl:my-[95px] flex flex-col gap-12 xl:grid xl:grid-cols-2 xl:h-[642px] md:w-[80%] mx-auto place-items-center"
+        className="relative my-[50px] xl:my-[95px] flex flex-col gap-12 xl:grid xl:grid-cols-2 xl:h-[642px] md:w-[80%] mx-auto place-items-center"
       >
         <motion.div variants={fadeUp}>
           <ConferenceExpCard
