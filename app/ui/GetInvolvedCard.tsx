@@ -1,4 +1,8 @@
+"use client";
+
 import { Icon } from "@iconify/react";
+import { motion } from "framer-motion";
+import Link from "next/link";
 import React from "react";
 
 type CardProps = {
@@ -21,73 +25,52 @@ const GetInvolvedCard: React.FC<CardProps> = ({
   li4,
 }) => {
   return (
-    <div>
-      <section className="bg-white border-t-[8px] flex flex-col gap-[15px] md:w-[399px] w-fit h-[505px] border-[#33C36C] p-[35px] rounded-[15px] ">
-        <div className="bg-gradient-to-b from-[#33C36C] to-[#185D34] rounded-[50%] p-[10px] md:p-[16px] w-fit h-fit flex justify-center items-center ">
-          <Icon
-            icon={icon}
-            width={32}
-            height={32}
-            className=" text-white max-md:w-[26px] max-md:h-[26px] "
-          />
-        </div>
-        <h2 className="md:text-[28px] text-[18px] font-medium leading-[36px] ">
-          {header}
-        </h2>
-        <p className=" md:text-[16px] text-[12px] h-[74px] font-normal md:leading-[27px] text-black/65 ">
-          {paragraph}
-        </p>
-        <ul className=" flex flex-col gap-[8px] ">
-          <li className="flex gap-[6px]">
+    <motion.section
+      whileHover={{ y: -6, scale: 1.02 }}
+      transition={{ type: "spring", stiffness: 240, damping: 18 }}
+      className="flex flex-col gap-4 rounded-[16px] bg-white p-[32px] md:w-[380px] shadow-[0_10px_30px_rgba(0,0,0,0.08)]
+                 border-t-[8px] border-[#33C36C] transition-all"
+    >
+      {/* Icon badge */}
+      <div className="flex h-[64px] w-[64px] items-center justify-center rounded-full bg-gradient-to-b from-[#33C36C] to-[#185D34]">
+        <Icon icon={icon} width={30} height={30} className="text-white" />
+      </div>
+
+      {/* Title + description */}
+      <h2 className="text-[20px] md:text-[24px] font-semibold">{header}</h2>
+      <p className="text-[14px] md:text-[16px] text-black/70 leading-relaxed">
+        {paragraph}
+      </p>
+
+      {/* Benefits list */}
+      <ul className="mt-2 flex flex-col gap-2">
+        {[li1, li2, li3, li4].map((item) => (
+          <li key={item} className="flex items-start gap-2">
             <Icon
-              icon={"charm:circle-tick"}
-              width={16}
-              height={16}
-              className="  text-[#13A829] "
+              icon="charm:circle-tick"
+              width={18}
+              height={18}
+              className="text-[#13A829]"
             />
-            <span className=" md:text-[14px] text-[11px] font-normal leading-[24px] text-black/65 ">
-              {li1}
+            <span className="text-[13px] md:text-[15px] text-black/70">
+              {item}
             </span>
           </li>
-          <li className="flex gap-[6px]">
-            <Icon
-              icon={"charm:circle-tick"}
-              width={16}
-              height={16}
-              className=" text-[#13A829] "
-            />
-            <span className=" md:text-[14px] text-[11px] font-normal leading-[24px] text-black/65 ">
-              {li2}
-            </span>
-          </li>
-          <li className="flex gap-[6px]">
-            <Icon
-              icon={"charm:circle-tick"}
-              width={16}
-              height={16}
-              className=" text-[#13A829] "
-            />
-            <span className=" md:text-[14px] text-[11px] font-normal leading-[24px] text-black/65 ">
-              {li3}
-            </span>
-          </li>
-          <li className="flex gap-[6px]">
-            <Icon
-              icon={"charm:circle-tick"}
-              width={16}
-              height={16}
-              className=" text-[#13A829] "
-            />
-            <span className=" md:text-[14px] text-[11px] font-normal leading-[24px] text-black/65 ">
-              {li4}
-            </span>
-          </li>
-        </ul>
-        <button className="border  border-[#33C36C] hover:bg-[#22b35b] w-full py-[8px] md:py-[10px] mt-[16px] cursor-pointer text-[#33C36C] hover:text-white font-[500] rounded-[20px]  ">
-          Apply Now
-        </button>
-      </section>
-    </div>
+        ))}
+      </ul>
+
+      {/* CTA */}
+      <Link href={'/register'}>
+        <motion.button
+          whileHover={{ scale: 1.03, backgroundColor: "#22b35b", color: "#fff" }}
+          whileTap={{ scale: 0.96 }}
+          className="mt-auto w-full rounded-[20px] border border-[#33C36C] py-2 md:py-3 text-[#33C36C] font-medium
+                     transition-colors focus:outline-none focus-visible:ring-4 focus-visible:ring-[#33C36C]/30"
+        >
+          Apply Now →
+        </motion.button>
+      </Link>
+    </motion.section>
   );
 };
 

@@ -35,7 +35,7 @@ const Nav = () => {
 
   const navItems = [
     { href: "/", label: "Home" },
-    { href: "/hackjos", label: "HackJos" },
+    { href: "/mission", label: "HackJos" },
     { href: "/partners", label: "Partners" },
   ];
 
@@ -78,7 +78,7 @@ const Nav = () => {
                 <Link
                   href={item.href}
                   className={`hover:text-[#ffcc00] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#33C36C] focus:ring-offset-2 focus:ring-offset-transparent rounded px-2 py-1 ${
-                    pathname === item.href ? "text-[#93c333]" : ""
+                    pathname === item.href ? "font-bold" : ""
                   }`}
                   aria-current={pathname === item.href ? "page" : undefined}
                 >
@@ -89,12 +89,14 @@ const Nav = () => {
           </ul>
 
           {/* Desktop Contact Button */}
-          <button
-            onClick={handleContactClick}
-            className="border-2 hover:text-[#33C36C] hover:border-[#33C36C] hover:bg-white/5 transition-all duration-300 hidden lg:block border-white rounded-full h-[60px] font-medium text-[20px] px-12 focus:outline-none focus:ring-2 focus:ring-[#33C36C] focus:ring-offset-2 focus:ring-offset-transparent"
-          >
-            Contact Us
-          </button>
+          <Link href={'#contact'}>
+            <button
+              onClick={handleContactClick}
+              className="border-2 hover:text-[#33C36C] hover:border-[#33C36C] hover:bg-white/5 transition-all duration-300 hidden lg:block border-white rounded-full h-[60px] font-medium text-[20px] px-12 focus:outline-none focus:ring-2 focus:ring-[#33C36C] focus:ring-offset-2 focus:ring-offset-transparent"
+            >
+              Contact Us
+            </button>
+          </Link>
 
           {/* Mobile Menu Toggle */}
           <button
@@ -142,15 +144,17 @@ const Nav = () => {
                   {item.label}
                 </Link>
               ))}
-              <button
-                onClick={() => {
-                  handleContactClick();
-                  setMenuOpen(false);
-                }}
-                className="border-2 hover:text-[#33C36C] hover:border-[#33C36C] hover:bg-white/5 transition-all duration-300 border-white rounded-full h-12 font-medium text-lg px-8 mt-2 focus:outline-none focus:ring-2 focus:ring-[#33C36C] focus:ring-offset-2 focus:ring-offset-transparent"
-              >
-                Contact Us
-              </button>
+              <Link href={'#contact'}>
+                <button
+                  onClick={() => {
+                    handleContactClick();
+                    setMenuOpen(false);
+                  }}
+                  className="border-2 hover:text-[#33C36C] hover:border-[#33C36C] hover:bg-white/5 transition-all duration-300 border-white rounded-full h-12 font-medium text-lg px-8 mt-2 focus:outline-none focus:ring-2 focus:ring-[#33C36C] focus:ring-offset-2 focus:ring-offset-transparent"
+                >
+                  Contact Us
+                </button>
+              </Link>
             </div>
           </div>
         </div>

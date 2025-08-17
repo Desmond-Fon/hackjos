@@ -1,13 +1,15 @@
 "use client";
-import React, { useState } from "react";
+
+import React from "react";
 import { Icon } from "@iconify/react";
-import "../globals.css";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 type CardProps = {
-  image: string;
+  image: string; // path relative to /public
   header: string;
   paragraph: string;
-  hoverImage: string;
+  hoverImage: string; // iconify name
 };
 
 const WhoShouldAttendCard: React.FC<CardProps> = ({
@@ -16,47 +18,56 @@ const WhoShouldAttendCard: React.FC<CardProps> = ({
   paragraph,
   hoverImage,
 }) => {
-  const [shown, setShown] = useState(false);
-
   return (
-    <div
-      onMouseEnter={() => setShown(true)}
-      onMouseLeave={() => setShown(false)}
+    <motion.article
+      whileHover={{ y: -6, scale: 1.02 }}
+      transition={{ type: "spring", stiffness: 260, damping: 22 }}
+      className="group w-full rounded-[20px] bg-white shadow-[0_10px_30px_rgba(0,0,0,0.08)]
+                 border border-black/[0.06] px-[20px] py-[22px] md:px-[24px] md:py-[26px]"
+      aria-label={header}
     >
-      {" "}
-      <section
-        className={`md:max-w-[627px] h-full max-md:w-[300px] shadow-blur rounded-[20px]  bg-white space-y-[33px] mb-[51px] py-2 `}
-      >
-        <div className='px-[20px] flex flex-col items-center space-y-[15px] pb-[40px]'>
-          <div className='relative  w-[80px] aspect-[1/1]'>
-            <img
-              src={image}
-              className='w-full h-full object-cover rounded-full transition-all duration-700'
-              alt='profile'
+      <div className="flex flex-col items-center space-y-4 md:space-y-5">
+        {/* Avatar/Image with overlay icon */}
+        <div className="relative w-[90px] h-[90px] md:w-[100px] md:h-[100px]">
+          <Image
+            src={`/${image}`}
+            alt={`${header} avatar`}
+            fill
+            sizes="120px"
+            className="rounded-full object-cover"
+            priority={false}
+          />
+          {/* Dark overlay + icon on hover */}
+          <motion.div
+            className="absolute inset-0 rounded-full bg-black/55 flex items-center justify-center"
+            initial={{ opacity: 0 }}
+            whileHover={{ opacity: 1 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
+          >
+            <Icon
+              icon={hoverImage}
+              width={30}
+              height={30}
+              className="text-white"
+              aria-hidden
             />
-            <div
-              className={`absolute inset-0 bg-black/60 rounded-full flex items-center justify-center transition-all duration-[.7s] ${
-                shown ? "opacity-100" : "opacity-0 "
-              }`}
-            >
-              <Icon
-                icon={hoverImage}
-                width={32}
-                height={32}
-                className='text-white'
-              />
-            </div>
-          </div>
-
-          <h2 className='font-medium md:text-[28px] text-[20px] md:leading-[36px] leading-[26px] '>
-            {header}
-          </h2>
-          <p className='md:text-[20px] text-center text-[15px] font-normal md:leading-[38px] leading-[28px] text-black/75 '>
-            {paragraph}
-          </p>
+          </motion.div>
+          {/* Ring on hover */}
+          <span className="pointer-events-none absolute -inset-1 rounded-full ring-2 ring-transparent group-hover:ring-[#33C36C]/50 transition" />
         </div>
-      </section>
-    </div>
+
+        <h2 className="text-center font-semibold md:text-[22px] text-[18px] leading-tight">
+          {header}
+        </h2>
+
+        <p className="text-center text-black/75 text-[15px] md:text-[18px] leading-[1.7] max-w-[90%]">
+          {paragraph}
+        </p>
+      </div>
+
+      {/* Bottom accent bar */}
+      <div className="mx-auto mt-5 h-[3px] w-12 rounded-full bg-[#33C36C]/70 group-hover:w-20 transition-all" />
+    </motion.article>
   );
 };
 

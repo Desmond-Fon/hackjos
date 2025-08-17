@@ -1,12 +1,15 @@
+"use client";
+
 import React from "react";
 import { Icon } from "@iconify/react";
+import { motion } from "framer-motion";
 
 type CardProps = {
   icon: string;
   date: string;
   header: string;
   paragraph: string;
-  classname: string;
+  classname?: string;
 };
 
 const ConferenceExpCard: React.FC<CardProps> = ({
@@ -14,32 +17,31 @@ const ConferenceExpCard: React.FC<CardProps> = ({
   date,
   header,
   paragraph,
-  classname,
+  classname = "",
 }) => {
   return (
-    <section
-      className={` md:max-w-[635px] max-md:w-[300px] md:py-[21px] px-[40px] shadow-blur-2 rounded-[20px] bg-white space-y-[33px] mb-[51px]  ${classname} `}
+    <motion.section
+      whileHover={{ y: -6, scale: 1.02 }}
+      transition={{ type: "spring", stiffness: 260, damping: 22 }}
+      className={`w-full md:max-w-[600px] rounded-[20px] bg-white shadow-[0_10px_30px_rgba(0,0,0,0.08)]
+                  px-[28px] py-[28px] md:py-[36px] space-y-[20px] ${classname}`}
     >
-      <div className='lg:px-[20px] space-y-[15px] pb-[40px]  '>
-        <div className='flex max-md:flex-col gap-[16px] max-md:py-[20px] md:items-center'>
-          <Icon
-            icon={icon}
-            width={45}
-            height={45}
-            className='p-[9px] rounded-[50%] text-white bg-[#33C36C] '
-          />
-          <h2 className='font-medium text-black/75 bg-[#E0E0E059] rounded-[30px] px-[15px] py-[10px] md:text-[20px] text-[16px] md:leading-[36px] leading-[26px]'>
-            {date}
-          </h2>
-        </div>
-        <h2 className='font-medium md:text-[28px] text-[20px] md:leading-[36px] leading-[26px]'>
-          {header}
+      <div className="flex flex-col md:flex-row md:items-center gap-3">
+        <span className="flex items-center justify-center h-12 w-12 rounded-full bg-[#33C36C] text-white">
+          <Icon icon={icon} width={28} height={28} />
+        </span>
+        <h2 className="text-[15px] md:text-[18px] font-medium text-black/75 bg-[#F3F4F6] rounded-full px-4 py-2">
+          {date}
         </h2>
-        <p className='md:text-[22px] text-[18px] font-normal md:leading-[38px] leading-[28px] text-black/75 '>
-          {paragraph}
-        </p>
       </div>
-    </section>
+
+      <h3 className="font-semibold text-[20px] md:text-[26px] leading-tight">
+        {header}
+      </h3>
+      <p className="text-[16px] md:text-[18px] leading-[1.7] text-black/70">
+        {paragraph}
+      </p>
+    </motion.section>
   );
 };
 

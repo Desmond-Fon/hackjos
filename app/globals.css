@@ -40,3 +40,50 @@
   height: 350px;
 }
 
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-zoomSlow,
+  .animate-float,
+  .animate-fadeInUp,
+  .animate-scrollCue {
+    animation: none !important;
+  }
+}
+
+/* slow background zoom */
+@keyframes zoomSlow {
+  0%   { transform: scale(1) }
+  100% { transform: scale(1.08) }
+}
+.animate-zoomSlow {
+  animation: zoomSlow 18s ease-in-out both;
+}
+
+/* float dots */
+@keyframes float {
+  0%   { transform: translateY(0) }
+  50%  { transform: translateY(-8px) }
+  100% { transform: translateY(0) }
+}
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* staged fade-in + up */
+@keyframes fadeInUp {
+  0%   { opacity: 0; transform: translateY(16px) }
+  100% { opacity: 1; transform: translateY(0) }
+}
+.animate-fadeInUp {
+  animation: fadeInUp .8s cubic-bezier(.22,.61,.36,1) forwards;
+}
+
+/* scroll cue */
+@keyframes scrollCue {
+  0%   { transform: translateY(0); opacity: .8 }
+  70%  { transform: translateY(10px); opacity: .2 }
+  100% { transform: translateY(0); opacity: .8 }
+}
+.animate-scrollCue {
+  animation: scrollCue 1.8s ease-in-out infinite;
+}
