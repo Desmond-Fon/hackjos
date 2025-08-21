@@ -36,7 +36,7 @@ const ChallengeCard: React.FC<CardProps> = ({ icon, header, paragraph }) => {
       "
       aria-label={header}
     >
-      <div className="mb-3 flex items-start gap-3">
+      <div className="mb-3 flex items-center gap-3">
         <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#33C36C1A] text-[#33C36C]">
           <Icon icon={icon} width={24} height={24} aria-hidden />
         </span>

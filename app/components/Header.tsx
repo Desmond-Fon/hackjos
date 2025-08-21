@@ -103,7 +103,7 @@ const Header = () => {
 
       {/* Content */}
       <motion.div
-        className="h-full px-4 flex flex-col items-center justify-center text-center"
+        className="-mt-28 px-4 flex flex-col items-center justify-center text-center z-[1000] relative"
         variants={container}
         initial="hidden"
         animate="show"
@@ -120,7 +120,7 @@ const Header = () => {
         <motion.h1
           variants={fadeUp}
           className="font-extrabold leading-none
-                     text-[clamp(2.5rem,6vw,6.5rem)]"
+                text-[clamp(2.5rem,6vw,6.5rem)]"
         >
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80">
             HackJos
@@ -143,12 +143,6 @@ const Header = () => {
 
         {/* Theme + subcopy */}
         <motion.div variants={fadeUp} className="max-w-3xl mt-4">
-          <p className="text-[clamp(1rem,2.2vw,1.375rem)] font-medium/relaxed">
-            Theme:{" "}
-            <span className="font-semibold italic">
-              “Igniting MSMEs Growth Through Innovation”
-            </span>
-          </p>
           <p className="mt-2 text-[clamp(1rem,2.2vw,1.375rem)] text-white/90">
             Join Nigeria&apos;s top hackathon and conference as we celebrate 10
             years <br className="hidden lg:block" />
@@ -188,9 +182,9 @@ const Header = () => {
               }}
               whileTap={{ scale: 0.98 }}
               className="group h-[44px] md:h-[50px] xl:h-[75px] rounded-[20px] md:rounded-[30px]
-                         px-5 md:px-10 bg-[#33C36C] text-white md:text-[20px] xl:text-[28px] font-medium
-                         shadow-[0_10px_24px_rgba(51,195,108,0.28)] hover:shadow-[0_16px_40px_rgba(51,195,108,0.38)]
-                         transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-400/40"
+                     px-5 md:px-10 bg-[#33C36C] text-white md:text-[20px] xl:text-[28px] font-medium
+                     shadow-[0_10px_24px_rgba(51,195,108,0.28)] hover:shadow-[0_16px_40px_rgba(51,195,108,0.38)]
+                     transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-400/40"
             >
               Apply for HackJos{" "}
               <span className="hidden lg:inline">Challenge</span>
@@ -216,10 +210,10 @@ const Header = () => {
               }}
               whileTap={{ scale: 0.98 }}
               className="h-[44px] md:h-[50px] xl:h-[75px] rounded-[20px] md:rounded-[30px]
-                         px-5 md:px-10 text-[#33C36C] bg-white md:text-[20px] xl:text-[28px] font-medium
-                         border border-white/70 hover:border-white shadow-[0_6px_18px_rgba(0,0,0,0.15)]
-                         hover:shadow-[0_10px_28px_rgba(0,0,0,0.22)]
-                         transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-white/40"
+                     px-5 md:px-10 text-[#33C36C] bg-white md:text-[20px] xl:text-[28px] font-medium
+                     border border-white/70 hover:border-white shadow-[0_6px_18px_rgba(0,0,0,0.15)]
+                     hover:shadow-[0_10px_28px_rgba(0,0,0,0.22)]
+                     transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-white/40"
             >
               Register to Attend
             </motion.button>

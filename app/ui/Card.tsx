@@ -53,7 +53,7 @@ const Card: React.FC<CardProps> = ({ image, icon, header, paragraph }) => {
 
       {/* Content */}
       <div className="px-5 py-5 md:px-6 md:py-6">
-        <div className="mb-2 flex items-start gap-3">
+        <div className="mb-2 flex items-center gap-3">
           <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#33C36C] text-white">
             <Icon icon={icon} width={22} height={22} aria-hidden />
           </span>

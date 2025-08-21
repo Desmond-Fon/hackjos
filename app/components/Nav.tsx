@@ -55,7 +55,7 @@ const Nav = () => {
       <nav
         className={`${
           isHomePage
-            ? "bg-gradient-to-b from-[#0E0E0E59] to-[#0E0E0E]"
+            ? "bg-gradient-to-b from-[#0E0E0E59] to-[#0E0E0E] sticky top-0 left-0 w-full shadow-lg backdrop-blur-sm"
             : "bg-[#33C36C]"
         } px-6 md:px-20 text-white py-4 xl:py-6 relative z-50`}
         role="navigation"
