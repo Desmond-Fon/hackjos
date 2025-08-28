@@ -166,7 +166,7 @@ const Page = () => {
               alt="HackJos team collaborating"
               width={900}
               height={600}
-              className="object-cover w-full h-full"
+              className="object-cover "
               priority={false}
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
@@ -187,7 +187,7 @@ const Page = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "0px 0px -80px 0px" }}
-          className="flex flex-wrap justify-center gap-[18px] m-auto px-4"
+          className="flex flex-col lg:flex-row items-center justify-center gap-[18px] m-auto px-4"
         >
           {Array.from({ length: 3 }).map((_, i) => (
             <motion.div key={i} variants={fadeUp}>

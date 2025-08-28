@@ -3,6 +3,7 @@
 import React from "react";
 import Card from "../ui/ChallengeCard";
 import { motion, type Variants } from "framer-motion";
+import Link from "next/link";
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -133,17 +134,19 @@ const HackChallenge: React.FC = () => {
         viewport={{ once: true }}
         className="w-full flex justify-center mt-10 px-6"
       >
-        <button
-          className="group rounded-[30px] bg-[#33C36C] px-[20px] md:px-[45px] py-[10px]
-                     text-white text-[18px] md:text-[24px] xl:text-[28px] font-medium
-                     shadow-[0_10px_24px_rgba(51,195,108,0.28)] hover:shadow-[0_16px_40px_rgba(51,195,108,0.38)]
-                     transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-400/40"
-        >
-          View Challenge Details
-          <span className="ml-2 inline-block translate-x-0 transition-transform duration-300 group-hover:translate-x-1">
-            →
-          </span>
-        </button>
+        <Link href={'/about'}>
+          <button
+            className="group rounded-[30px] bg-[#33C36C] px-[20px] md:px-[45px] py-[10px]
+                       text-white text-[18px] md:text-[24px] xl:text-[28px] font-medium
+                       shadow-[0_10px_24px_rgba(51,195,108,0.28)] hover:shadow-[0_16px_40px_rgba(51,195,108,0.38)]
+                       transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-400/40"
+          >
+            View Challenge Details
+            <span className="ml-2 inline-block translate-x-0 transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
+          </button>
+        </Link>
       </motion.div>
     </main>
   );

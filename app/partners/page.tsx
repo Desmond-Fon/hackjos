@@ -11,7 +11,23 @@ import { motion, type Variants, useReducedMotion } from "framer-motion";
 // import "swiper/css";
 // import "swiper/css/free-mode";
 
-const duplicatedImages = Array.from({ length: 20 }, () => "/partner.png");
+const duplicatedImages = [
+  "/partner.png",
+  "/partner2.svg",
+  "/partner3.svg",
+  "/partner4.jpeg",
+  "/partner5.svg",
+  "/partner.png",
+  "/partner2.svg",
+  "/partner3.svg",
+  "/partner4.jpeg",
+  "/partner5.svg",
+  "/partner.png",
+  "/partner2.svg",
+  "/partner3.svg",
+  "/partner4.jpeg",
+  "/partner5.svg",
+];
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -84,21 +100,13 @@ const Partners = () => {
           title="Strategic Partners"
           subtitle="These organizations have played a pivotal role in shaping our ecosystem and championing tech growth over the past decade."
         />
-        <LogoMarquee
-          images={duplicatedImages}
-          prefersReduced={prefersReduced}
-        />
-
-        {/* Event Sponsors */}
-        <SectionHeading
-          title="Event Sponsors"
-          subtitle="HackJos 2025 and nHub@10 are made possible through the generous support of our sponsors."
-          topMargin
-        />
-        <LogoMarquee
-          images={duplicatedImages}
-          prefersReduced={prefersReduced}
-        />
+        <div className="mt-5">
+          
+          <LogoMarquee
+            images={duplicatedImages}
+            prefersReduced={prefersReduced}
+          />
+        </div>
 
         {/* CTA */}
         <motion.div
@@ -235,7 +243,7 @@ const LogoMarquee = ({
               loading="lazy"
               src={image}
               alt={`Partner ${index + 1}`}
-              className="w-full h-auto object-contain grayscale hover:grayscale-0 transition"
+              className="w-[180px] h-[100px] lg:h-[160px] object-contain grayscale hover:grayscale-0 transition"
               width={180}
               height={90}
             />

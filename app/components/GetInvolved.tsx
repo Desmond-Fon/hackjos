@@ -84,6 +84,8 @@ const GetInvolved = () => {
             li2="Mentorship access"
             li3="Prize eligibility"
             li4="Networking opportunities"
+            link="/register"
+            linkName="Apply Now"
           />
         </motion.div>
 
@@ -96,6 +98,8 @@ const GetInvolved = () => {
             li2="Talent access"
             li3="Industry leadership"
             li4="Community investment"
+            link="https://wa.me/+2348068897177?text=Hello%20I%20am%20interested%20in%20becoming%20a%20speaker%20at%20hackjos%20event"
+            linkName="Contact Us"
           />
         </motion.div>
 
@@ -108,6 +112,8 @@ const GetInvolved = () => {
             li2="Talent access"
             li3="Industry leadership"
             li4="Community investment"
+            link="https://wa.me/+2348068897177?text=Hello%20I%20am%20interested%20in%20becoming%20a%20sponsor%20at%20hackjos%20event"
+            linkName="Contact Us"
           />
         </motion.div>
       </motion.section>

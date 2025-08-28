@@ -13,6 +13,8 @@ type CardProps = {
   li2: string;
   li3: string;
   li4: string;
+  link: string;
+  linkName: string;
 };
 
 const GetInvolvedCard: React.FC<CardProps> = ({
@@ -23,6 +25,8 @@ const GetInvolvedCard: React.FC<CardProps> = ({
   li2,
   li3,
   li4,
+  link,
+  linkName,
 }) => {
   return (
     <motion.section
@@ -60,14 +64,18 @@ const GetInvolvedCard: React.FC<CardProps> = ({
       </ul>
 
       {/* CTA */}
-      <Link href={'/register'}>
+      <Link href={link}>
         <motion.button
-          whileHover={{ scale: 1.03, backgroundColor: "#22b35b", color: "#fff" }}
+          whileHover={{
+            scale: 1.03,
+            backgroundColor: "#22b35b",
+            color: "#fff",
+          }}
           whileTap={{ scale: 0.96 }}
           className="mt-auto w-full rounded-[20px] border border-[#33C36C] py-2 md:py-3 text-[#33C36C] font-medium
                      transition-colors focus:outline-none focus-visible:ring-4 focus-visible:ring-[#33C36C]/30"
         >
-          Apply Now →
+          {linkName} →
         </motion.button>
       </Link>
     </motion.section>
