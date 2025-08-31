@@ -1,4 +1,4 @@
-import { createServerClient } from "@supabase/ssr";
+import { createClient } from "@supabase/supabase-js";
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 
@@ -6,8 +6,7 @@ export async function middleware(request: NextRequest) {
   const cookieStore = await cookies();
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
   const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-  
-  const supabase = createServerClient(supabaseUrl, supabaseKey, {
+  const supabase = createClient(supabaseUrl, supabaseKey, {
     cookies: {
       get(name: string) {
         return cookieStore.get(name)?.value;

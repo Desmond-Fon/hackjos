@@ -25,7 +25,6 @@ export async function POST(request: NextRequest) {
       ideaDescription 
     } = body;
     
-    // Basic validation
     if (!fullName || !email || !phoneNumber || !category || !skill || hasTeam === undefined || !ideaDescription) {
       return NextResponse.json(
         { error: 'Missing required fields' },
@@ -33,7 +32,6 @@ export async function POST(request: NextRequest) {
       );
     }
     
-    // Add timestamp
     const submissionData = {
       full_name: fullName,
       email,
@@ -46,7 +44,6 @@ export async function POST(request: NextRequest) {
       created_at: new Date().toISOString(),
     };
     
-    // Insert into Supabase
     const { data, error } = await supabase
       .from('participant_applications')
       .insert(submissionData)
@@ -60,7 +57,6 @@ export async function POST(request: NextRequest) {
       );
     }
     
-    // Return success response with the created data
     return NextResponse.json({ 
       success: true, 
       message: 'Application submitted successfully',
