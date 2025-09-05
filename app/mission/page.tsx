@@ -187,21 +187,53 @@ const Page = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "0px 0px -80px 0px" }}
-          className="flex flex-col lg:flex-row items-center justify-center gap-[18px] m-auto px-4"
+          className="flex flex-col lg:flex-row items-start justify-center gap-[18px] m-auto px-4"
         >
-          {Array.from({ length: 3 }).map((_, i) => (
-            <motion.div key={i} variants={fadeUp}>
-              <MissionCard
-                Image="/missionHuman.png"
-                Icon1="pajamas:twitter"
-                Icon2="streamline:linkedin"
-                Icon3="circum:mail"
-                header2="Sarah Williams"
-                greenHeader2="CEO & Co-Founder Techyy"
-                paragraph="A leading voice in African innovation, [Name] has built solutions that impact thousands, advocating for technology as a driver of economic growth"
-              />
-            </motion.div>
-          ))}
+          <motion.div variants={fadeUp}>
+            <MissionCard
+              Image="/ali.jpeg"
+              Icon1="pajamas:twitter"
+              Icon2="streamline:linkedin"
+              Icon3="circum:mail"
+              header2="Bomkam Ali Wuyep"
+              greenHeader2="Director General, PLASMEDA"
+              paragraph="Bomkam Ali Wuyep is an accomplished financial expert with B.Sc. and M.Sc. in Accounting from the University of Jos and currently pursuing a Ph.D. in Accounting and Finance.
+He is a Fellow of FCIA, ANAN, CIBN, and a member of ICMC, reflecting his strong professional standing.
+He has served as Director of Administration and Finance at PLASMIDA and is currently the DG of Plateau State Microfinance Development Agency.
+He also coordinates NG-CARES Result Area III in Plateau State, contributes to the MSME Council, and actively engages in professional development globally."
+            />
+          </motion.div>
+          <motion.div variants={fadeUp}>
+            <MissionCard
+              Image="/bruce.jpeg"
+              Icon1="pajamas:twitter"
+              Icon2="streamline:linkedin"
+              Icon3="circum:mail"
+              header2="Bruce Lucas"
+              greenHeader2="Founder Olotu Square Tech Innovation Hub"
+              paragraph="Bruce Lucas , a tech solutions architect with the core focus of turning challenges into tech success stories! A passionate coach/mentor for aspiring startup founders, business owners, entrepreneurs, and tech enthusiasts, He thrives in the fast-paced world of startups, where innovation meets real-world challenges. He’s the tech pastor always at the heart of tech-driven ecosystems across Africa, pushing boundaries and creating lasting impact. 
+He is the:
+•⁠  ⁠CEO, Olotu Square Tech Innovation Hub,
+•⁠  ⁠CEO, Tier-1 Server Admin of Leanna Hosting 
+•⁠  ⁠A Google Lead Organizer, GDG SSA 
+•⁠  ⁠and a pan-Niger Delta Tech Ecosystem Champion"
+            />
+          </motion.div>
+          <motion.div variants={fadeUp}>
+            <MissionCard
+              Image="/ibe.jpg"
+              Icon1="pajamas:twitter"
+              Icon2="streamline:linkedin"
+              Icon3="circum:mail"
+              header2="Nnamdi Ibe"
+              greenHeader2="Founder Axia Innovation Hub"
+              paragraph="Nnamdi Ibe is an IT consultant, software engineer, and entrepreneur with 15+ years of experience delivering scalable, enterprise-grade technology solutions.
+He is CEO of Gnorizon Consults, Founder of Axia Technology & Innovation Hub, and CEO of TransportR Mobility Limited.
+He has led major projects in systems architecture, cloud computing, enterprise applications, and smart mobility solutions.
+Through Axia Hub, he mentors early-stage founders in AI, blockchain, IoT, and other emerging technologies.
+With a B.Sc. in Computer Science and multiple certifications, he is a sought-after speaker committed to empowering Africa’s next generation of innovators."
+            />
+          </motion.div>
         </motion.section>
 
         {/* CTA */}

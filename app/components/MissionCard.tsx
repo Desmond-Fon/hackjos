@@ -20,8 +20,8 @@ const MissionCard: React.FC<CardProps> = ({
   Icon3,
 }) => {
   return (
-    <div className=' max-w-[396px] lg:w-[396px] m-[20px] '>
-      <img src={Image} alt='' />
+    <div className='max-w-[396px] lg:w-[396px] lg:m-[20px] '>
+      <img src={Image} alt='' className="w-full h-[450px] object-top object-cover" />
       <section className=' flex flex-col gap-[20px] p-[10px] bg-white rounded-[20px] shadow-[0_4px_24px_rgba(0,0,0,0.1)] '>
         <h2 className=' text-[20px] font-medium leading-[30px] '>{header2}</h2>
         <h2 className='  text-[18px] font-medium leading-[27px] text-[#33C36C] '>
